@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduPulse AI | Final Master Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+</head>
+<body>
+    <div class="container animate__animated animate__fadeIn">
+        <h1 class="modern-heading">EduPulse <span class="ai-text">AI</span></h1>
+        
+        <div class="upload-section animate__animated animate__zoomIn">
+            <label for="pdfInput" class="custom-upload">
+                <span class="upload-icon">✨</span>
+                <span class="upload-text">Drop your notes here</span>
+                <input type="file" id="pdfInput" accept=".pdf, .txt, .jpg, .jpeg, .png">
+            </label>
+            <p id="status">Ready for Deep Learning Analysis</p>
+        </div>
+
+        <div id="loaderArea" style="display:none;">
+            <div class="neural-pulse"></div>
+            <p style="text-align: center; color: #2D274B; font-weight: 600; letter-spacing: 1px;">MAPPING KNOWLEDGE POINTS...</p>
+        </div>
+
+        <div id="resultSection" style="display:none;">
+            <div class="box animate__animated animate__fadeInUp" id="summaryArea">
+                <h3 class="section-title">📖 Detailed Concept Guide</h3>
+                <div id="summaryContent" class="detailed-points"></div>
+                <div style="text-align: center; margin-top: 30px;">
+                    <button id="startQuizBtn" class="btn-main">Take Master Assessment</button>
+                </div>
+            </div>
+
+            <div class="box animate__animated animate__fadeInUp" id="quizArea" style="display:none;">
+                <h3 class="section-title">🧠 Subject Mastery Quiz</h3>
+                <div id="quizContainer"></div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <button id="submitQuiz" class="btn-main">Submit for Scoring</button>
+                    <p id="scoreText"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
